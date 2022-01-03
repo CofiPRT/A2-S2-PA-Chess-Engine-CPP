@@ -1,0 +1,97 @@
+[Event "Computer Chess Game"]
+[Site "ubuntu"]
+[Date "2020.04.16"]
+[Round "1"]
+[White "Fairy-Max 5.0b"]
+[Black "chess"]
+[Result "*"]
+[TimeControl "300+2"]
+
+1. h4 {+0.03/2}
+{xboard exit (Clocks: 302, 289)} *
+
+[Event "Computer Chess Game"]
+[Site "ubuntu"]
+[Date "2020.04.16"]
+[Round "1"]
+[White "Fairy-Max 5.0b"]
+[Black "chess"]
+[Result "*"]
+[TimeControl "300+2"]
+
+1. c4 {+0.13/2}
+{xboard exit (Clocks: 301, 295)} *
+
+[Event "Computer Chess Game"]
+[Site "ubuntu"]
+[Date "2020.04.16"]
+[Round "-"]
+[White "rares"]
+[Black "chess"]
+[Result "*"]
+[TimeControl "300+2"]
+
+1. e4 g5 2. e5 Na6 3. e6 h6 4. h4 d5 5. hxg5 Bd7 6. gxh6 Qc8 7. h7 Ba4 8.
+hxg8=Q
+{xboard exit (Clocks: 300, 295)} *
+
+[Event "Computer Chess Game"]
+[Site "ubuntu"]
+[Date "2020.04.16"]
+[Round "-"]
+[White "rares"]
+[Black "chess"]
+[Result "*"]
+[TimeControl "300+2"]
+
+1. h4 h6 2. g4 e6 3. g5 d6 4. gxh6 Ke7 5. hxg7 Rh6 6. gxf8=B+
+{xboard exit (Clocks: 298, 302)} *
+
+[Event "Computer Chess Game"]
+[Site "ubuntu"]
+[Date "2020.04.16"]
+[Round "1"]
+[White "Fairy-Max 5.0b"]
+[Black "chess"]
+[Result "*"]
+[TimeControl "300+2"]
+
+1. d4 {+0.14/2}
+{xboard exit (Clocks: 301, 296)} *
+
+[Event "Computer Chess Game"]
+[Site "ubuntu"]
+[Date "2020.04.16"]
+[Round "-"]
+[White "chess"]
+[Black "rares"]
+[Result "*"]
+[TimeControl "300+2"]
+
+1. Na3 e5
+{xboard exit (Clocks: 239, 297)} *
+
+[Event "Computer Chess Game"]
+[Site "ubuntu"]
+[Date "2020.04.16"]
+[Round "-"]
+[White "chess"]
+[Black "chess"]
+[Result "0-1"]
+[TimeControl "300+2"]
+
+1. e4 Nc6
+{User adjudication} 0-1
+
+[Event "Computer Chess Game"]
+[Site "ubuntu"]
+[Date "2020.04.16"]
+[Round "1"]
+[White "Fairy-Max 5.0b"]
+[Black "chess"]
+[Result "*"]
+[TimeControl "300+2"]
+
+1. f3 {+0.11/2}
+{xboard exit (Clocks: 301, 294)} *
+

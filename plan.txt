@@ -1,0 +1,65 @@
+--------------------------------------------------------------------------------
+FILE: main.c
+
+main()
+	init_stuff()
+
+	while(true)
+		get_input()
+		if (no_input)
+			continue
+
+		choose_func(input)
+
+		if ($? == QUIT_CODE)
+			// QUIT_CODE to be set
+			break
+
+	term_stuff()
+
+
+init_stuff()
+	setbuffers()
+		setbuf(stdin, NULL)
+		setbuf(stdout, NULL)
+
+	associate_signals()
+		SIGINT -> SIG_IGN
+		// "xboard sends SIGINT (interrupt) at certain times when it believes 
+		the engine may not be listening to user input (either thinking or 
+		pondering); ignore with SIG_IGN"
+
+		SIGTERM -> default (don't set)
+		or
+		SIGTERM -> term_stuff()
+			// consider this
+
+term_stuff()
+	// to be implemented when necessary
+
+get_input()
+	// should be easy
+
+choose_func(input)
+	function_map map[] = {
+		{"comm_name1", func_name1},
+		{"comm_name2", func_name2},
+		...
+	};
+
+	for (entry : map)
+		if (input == entry.comm_name)
+			return entry.func_name
+
+
+
+--------------------------------------------------------------------------------
+FILE: main_header.h
+
+typedef struct function_map
+{
+	char *fname; // function mapping
+	void (*f)();
+} function_map;
+
+--------------------------------------------------------------------------------

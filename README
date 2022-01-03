@@ -1,0 +1,186 @@
+* IMPORTANT *
+	(Linia #) din cuprins se refera la Linia # din acest fisier README
+
+Cuprins:
+	Compilare...................Linia  29
+	Structura proiectului.......Linia  41
+		utils.*.................Linia  42
+		pieces.*................Linia  56
+		board.*.................Linia  88
+		functions.*.............Linia 106
+		engine.*................Linia 146
+		main.cpp................Linia 155
+	Abordare algoritmica........Linia 161
+	Surse de inspiratie.........Linia 175
+	Responsabilitati............Linia 186
+
+
+--- Compilare ---
+	* Proiectul este realizat in limbajul C++ si compilat cu 'g++'' versiunea
+	7.5.0
+	* Este prezent un fisier 'Makefile' cu reguli de 'build' (default), 'run' si
+	'clean'
+		* Regula de 'run' porneste direct xboard, oferindu-i executabilul
+		principal 'chess'. Pentru a rula doar engine-ul, ce asteapta comenzi
+		xboard de la stdin, se poate rula './chess'
+		* Se poate rula direct 'make run' pentru compilare si ulterior pentru
+		imediata rulare 
+	* Nu este prezent un fisier CMakeLists.txt
+
+--- Structura proiectului ---
+	=== utils.* ===
+		* Sunt prezente functii "utilitare", ce ajuta la diverse teste scurte
+		si conversii. In principiu se lucreaza cu niste perechi 'std::pair'
+		importante:
+			* Square: O pereche de 2 intregi in [0,7] ce reprezinta coordoatele
+			dintr-o matrice 8x8 folosita drept tabla de joc
+
+			* Move: O pereche de 2 Square-uri ce reprezinta o mutare, mai precis
+			pozitia de dinainte si pozitia de dupa mutare
+
+		* sunt prezente functii pentru conversia string <-> square sau
+		string <-> move, si functii foarte mici ce asigura apartenenta unui
+		numar la un anumit interval
+
+	=== pieces.* ===
+		* Partea object-oriented a programului
+
+		* O clasa abstracta (in C++, contine o functie virtuala) Piece ce din
+		care vor mosteni toate piesele existente in joc
+			* Prezinta campuri generice precum culoarea si pozitia piesei,
+			precum si alte campuri de stare ce vor ajuta la ulterioare accesari
+			O(1) (de cate alte piese este protejata, daca este 'pinned' de o
+			piesa a oponentului etc.)
+
+		* Toate clasele ce o mostenesc pe cea antepusa implementeaza cate o
+		functie, speciala fiecareia, care analizeaza tabla de joc in functie de
+		directiile de miscare/atac ale ei (calcPoses())
+
+		* Unele piese au campuri speciale (de obicei pentru mutari speciale),
+		precum dreptul unui rege de a face rocada, dreptul unui pion de a
+		inainta 2 piese (ceea ce il face susceptibil la en passant) etc.
+
+		* Fiecare peisa genereaza cate o mutare in directia/directiile lor de
+		miscare/atac si o verifica daca este valida (daca este o alta piesa la
+		destinatie, daca este libera destinatia, daca este pe tabla etc.). In
+		final se genereaza un vector cu toate mutarile valide ale piesei (
+		adancime de calcul 1 -> nicio mutare astfel calculata nu are vreo
+		valoare de beneficiu)
+
+		* Regele, in particular, simuleaza existenta unui alt rege de aceeasi
+		culoare pe pozitia testata, dupa care verifica daca oricare dintre
+		piesele adversarului o ataca. Acest lucru va fi schimbat la salvarea
+		detaliilor pozitiilor, astfel incat sa se verifice o singura data
+		pozitiile de atac ale tuturor pieselor, si sa se stie daca o anumita
+		pozitie este atacata sau nu (astfel accesarea acestui aspect va fi O(1))
+
+	=== board.* ===
+		* Contine clasa ce va folosita drept o instanta a tablei de joc.
+		Algoritmii de decizie a celei mai bune mutari vor itera printr-un tree
+		de astfel de instante generate
+
+		* O instanta prezinta tabla de joc drept pointeri catre Piese sau NULL
+		in cazul in care pozitia este libera
+			* Ulterior, se vor folosi pointeri catre pozitii astfel incat
+			fiecare pozitie sa aiba atribute ce vor facilita luarea deciziilor
+			in O(1) DUPA iterarea prin fiecare piesa (drept boolene, nu vor
+			avea impact semnificativ din punct de vedere spatial)
+
+		* Sunt prezente metode pentru adaugarea pieselor pe tabla, pentru
+		capturarea (stergerea) lor, pentru resetarea tablei si pentru
+		actualizarea tablei cu privire la o mutare (realizarea mutarii)
+
+		* printBoard() este folosit doar in scop de debugging
+
+	=== functions.* ===
+		* Este prezenta cate o functie pentru fiecare comanda necesara
+		etapei 1. In ordinea din fisier, acestea sunt mapate la comenzile
+		[xboard, new, force, go, white, black, move, resign, quit]
+
+		* xboard | init_game
+			* Initializeaza instanta curenta de joc si un seed pentru generarea
+			de numere aleatoare (momentan folosita pentru deciderea mutarii)
+
+		* new | new_game
+			* Reseteaza tabla de joc daca este cazul si seteaza atributele
+			default pentru engine (sa joace cu piesele negre si sa nu fie in
+			modul "forced")
+
+		* force | force_spectate
+			* Seteaza modul "forced" pentru engine
+
+		* go | force_play
+			* Reseteaza modul "forced" pentru engine
+
+		* white | play_as_white
+			* Impune engine-ului sa joace cu piesele albe
+
+		* black | play_as_black
+			* Impune engine-ului sa joace cu piesele negre
+
+		* move | make_move
+			* Cand primeste o mutare de la jucator (ex. "e2e4") sau de la un
+			alt engine (ex. "move e2e4") incepe algoritmul de executare a
+			unei mutari.
+				* Se mutari valide pentru toate piesele engine-ului
+				* Se alege una la intamplare (rand()) (bineinteles momentan)
+
+		* resign | resign_game
+			* Momentan este apelata doar cand nu au fost gasite miscari valide
+			sau regele este in sah (momentan)
+
+		* quit | quit_game
+			* Singura functie ce opreste executia programului
+
+	=== engine.* ===
+		* Contine campuri despre atributele engine-ului ce joaca (precum
+		culoare, atributul 'forced' etc.)
+
+		* Sunt prezente functii ce initializeaza motorul sau ii incheie
+		executia intr-o maniera eleganta, precum si un std::map ce mapeaza
+		un string (comanda primita de la stdin) la o functie din
+		functions.* (discutate anterior)
+
+	=== main.c ===
+		* Se initialieaza engine-ul
+		* Pana la primirea comenzii "quit", se accepta input-uri de la stdin
+		si sunt apelate comenzile aferente
+		* Se finalizeaza executia engine-ului
+
+--- Abordare algoritmica ---
+	* Descrisa si pe parcurs (mai sus), momentan, pentru executia fiecarei
+	mutari se genereaza toate mutarile (considerate valide de engine, nu de
+	regulile jocului - vor fi imbunatatite ulterior) posibile si se alege una
+	intr-un mod aleator (rand())
+
+	* Va fi implementata o abordare ce ofera mutarilor un scor (in functie de
+	beneficiul adus) si genereaza un tree de instante ale jocului, care va fi
+	traversat intr-un mod optim conform cunostintelor de algoritmica
+
+	* Intentionam sa generam un database de openings pentru a facilita primele
+	mutari. Dupa ce nu mai sunt mutari corespunzatoare in database, abia
+	atunci se va respecta algoritmul de decizie a mutarii
+
+--- Surse de inspiratie ---
+	* Opening database este un concept pe care l-am intalnit si la alte
+	engine-uri de sah foarte populare, prima oara intalnit (de noi) la
+	Stockfish. Bineinteles, ne vom genera propriul database intr-un mod
+	mult mai simplu (mutari de forma "e2e4"), nu in formatul polyglot
+	respectat de Stockfish.
+
+	* Indicatii de pe mai multe platforme pentru generarea unui stackTrace
+	in caz de SIGSEGV (segfault). Strict pentru debugging (am lucrat in C++
+	pe linux fara IDE, deci ne-a fost de folos acest lucru)
+
+--- Responsabilitati ---
+	* Pana acum, orice entry din Team_Log sau commit-uri pe gitlab au
+	semnificat doar calculatorul de pe care s-a lucrat, intrucat pentru
+	orice detaliu fiecare a contribuit la proiect prin intermediul
+	screen-sharing-ului (discutii privind abordarea, scrierea codului
+	propriu-zis si analiza lui etc.)
+
+	* Pe scurt, pentru fiecare detaliu din implementare s-a lucrat in echipa
+
+	* Momentan se ia in considerare impartirea sarcinilor, ceea ce necesita
+	abilitati bune de project manager (pentru a imparti si, ulterior, lega
+	sarcinile in mod ideal)

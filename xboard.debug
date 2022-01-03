@@ -1,0 +1,241 @@
+recognized 'normal' (-1) as variant normal
+recognized 'normal' (-1) as variant normal
+recognized 'normal' (-1) as variant normal
+shuffleOpenings = 0
+Requested font set for list -*-helvetica-medium-r-normal--12-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--12-*-*-*-*-*-*-*,-*-*-*-*-*-*-12-*-*-*-*-*-*-*
+ got list -*-helvetica-medium-r-normal--12-*-*-*-*-*-*-*,-misc-fixed-medium-r-normal--12-*-*-*-*-*-*-*,-*-*-*-*-*-*-12-*-*-*-*-*-*-*, locale en_US.UTF-8
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-1
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-1
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-2
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-3
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-4
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-5
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-koi8-r
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-7
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-9
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-13
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-14
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso8859-15
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-jisx0208.1983-0
+ got charset -daewoo-gothic-medium-r-normal--12-87-100-100-c-0-ksc5601.1987-0
+ got charset -isas-fangsong ti-medium-r-normal--12-87-100-100-c-0-gb2312.1980-0
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-jisx0201.1976-0
+ got charset -misc-fixed-medium-r-normal--12-87-100-100-c-0-iso10646-1
+Requested font set for list -*-helvetica-bold-r-normal--24-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--24-*-*-*-*-*-*-*,-*-*-*-*-*-*-24-*-*-*-*-*-*-*
+ got list -*-helvetica-bold-r-normal--24-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--24-*-*-*-*-*-*-*,-*-*-*-*-*-*-24-*-*-*-*-*-*-*, locale en_US.UTF-8
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-1
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-1
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-2
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-3
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-4
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-5
+ got charset -misc-fixed-medium-r-normal--24-173-100-100-c-0-koi8-r
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-7
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-9
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-13
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-14
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso8859-15
+ got charset -jis-fixed-medium-r-normal--24-170-100-100-c-240-jisx0208.1983-0
+ got charset -daewoo-mincho-medium-r-normal--24-170-100-100-c-240-ksc5601.1987-0
+ got charset -isas-song ti-medium-r-normal--24-240-72-72-c-240-gb2312.1980-0
+ got charset -sony-fixed-medium-r-normal--24-170-100-100-c-120-jisx0201.1976-0
+ got charset -misc-fixed-bold-r-normal--24-173-100-100-c-0-iso10646-1
+Requested font set for list -*-helvetica-bold-r-normal--10-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--10-*-*-*-*-*-*-*,-*-*-*-*-*-*-10-*-*-*-*-*-*-*
+ got list -*-helvetica-bold-r-normal--10-*-*-*-*-*-*-*,-misc-fixed-bold-r-normal--10-*-*-*-*-*-*-*,-*-*-*-*-*-*-10-*-*-*-*-*-*-*, locale en_US.UTF-8
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-1
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-1
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-2
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-3
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-4
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-5
+ got charset -misc-fixed-medium-r-normal--10-100-75-75-c-60-koi8-r
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-7
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-9
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-13
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-14
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso8859-15
+ got charset -jis-fixed-medium-r-normal--10-72-100-100-c-0-jisx0208.1983-0
+ got charset -daewoo-gothic-medium-r-normal--10-72-100-100-c-0-ksc5601.1987-0
+ got charset -isas-fangsong ti-medium-r-normal--10-72-100-100-c-0-gb2312.1980-0
+ got charset -misc-fixed-medium-r-normal--10-72-100-100-c-0-jisx0201.1976-0
+ got charset -misc-fixed-bold-r-normal--10-72-100-100-c-0-iso10646-1
+shuffleOpenings = 0
+Version: xboard 4.8.0 + fairymax ()
+Reset(1, 0) from gameMode 0
+recognized 'normal' (-1) as variant normal
+GameEnds(0, (null), 2)
+shuffleOpenings = 0
+StartChildProcess (dir=".") fairymax
+372 >first : xboard
+protover 2
+466 <first : tellics say     Fairy-Max 5.0b
+467 <first : tellics say     by H.G. Muller
+467 <first : feature myname="Fairy-Max 5.0b"
+467 >first : accepted myname
+467 <first : feature memory=1 exclude=1
+467 >first : accepted memory
+467 >first : accepted exclude
+467 <first : feature setboard=0 xedit=1 ping=1 done=0
+467 >first : accepted setboard
+467 >first : accepted xedit
+467 >first : accepted ping
+467 >first : accepted done
+467 <first : feature variants="normal,nocastle,shatranj,asean,makruk,cambodian,ai-wok,courier,knightmate,capablanca,gothic,janus,falcon,cylinder,berolina,super,seirawan,spartan,great,light-brigade,king-of-the-hill,bifurcator,team-mate,los-alamos,ciccolini,mexican,grande-acedrex,roman,almost-wildebeest,fairy"
+467 >first : accepted variants
+468 <first : feature option="Resign -check 0"
+468 >first : accepted option
+468 <first : feature option="Resign Threshold -spin 800 200 1200"
+468 >first : accepted option
+468 <first : feature option="Claim draw after -spin 50 0 200"
+468 >first : accepted option
+468 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
+468 >first : accepted option
+468 <first : feature option="Multi-PV Margin -spin 0 0 1000"
+468 >first : accepted option
+468 <first : feature option="Variant fairy selects -combo FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers /// FIDE-Rookies /// Rookies-FIDE /// Clobberers-Rookies /// Rookies-Clobberers /// Nutters-Rookies /// Rookies-Nutters"
+468 >first : accepted option
+468 <first : feature option="Makruk rules -combo makruk /// Cambodian /// Ai-wok"
+468 >first : accepted option
+468 <first : feature option="Dummy Slider Example -slider 20 0 100"
+468 >first : accepted option
+468 <first : feature option="Dummy String Example -string happy birthday!"
+468 >first : accepted option
+468 <first : feature option="Dummy Path Example -path ."
+468 >first : accepted option
+468 <first : feature option="Automatic persistent-hash dialog -check 0"
+468 >first : accepted option
+468 <first : feature option="Info -button"
+468 >first : accepted option
+468 <first : feature option="Save in hash file -button"
+468 >first : accepted option
+468 <first : feature option="Clear Hash -button"
+468 >first : accepted option
+468 <first : feature done=1
+468 >first : accepted done
+469 >first : memory 68
+469 >first : new
+random
+sd 2
+470 >first : level 0 5 2
+470 >first : post
+470 >first : hard
+470 >first : ping 1
+Reset(0, 1) from gameMode 0
+recognized 'normal' (-1) as variant normal
+GameEnds(0, (null), 2)
+474 >first : quit
+shuffleOpenings = 0
+StartChildProcess (dir=".") fairymax
+478 >first : xboard
+protover 2
+479 >first : option Resign=0
+479 >first : option Resign Threshold=800
+479 >first : option Claim draw after=50
+479 >first : option Ini File=/usr/share/games/fairymax/fmax.ini
+479 >first : option Multi-PV Margin=0
+479 >first : option Variant fairy selects=FIDE-Clobberers
+479 >first : option Makruk rules=makruk
+479 >first : option Dummy Slider Example=20
+479 >first : option Dummy String Example=happy birthday!
+479 >first : option Dummy Path Example=.
+479 >first : option Automatic persistent-hash dialog=0
+479 >first : memory 68
+479 >first : new
+random
+sd 2
+479 >first : level 0 5 2
+479 >first : post
+479 >first : hard
+479 >first : ping 2
+479 >first : force
+573 <first : tellics say     Fairy-Max 5.0b
+573 <first : tellics say     by H.G. Muller
+573 <first : feature myname="Fairy-Max 5.0b"
+573 >first : accepted myname
+573 <first : feature memory=1 exclude=1
+573 >first : accepted memory
+573 >first : accepted exclude
+573 <first : feature setboard=0 xedit=1 ping=1 done=0
+573 >first : accepted setboard
+573 >first : accepted xedit
+573 >first : accepted ping
+573 >first : accepted done
+573 <first : feature variants="normal,nocastle,shatranj,asean,makruk,cambodian,ai-wok,courier,knightmate,capablanca,gothic,janus,falcon,cylinder,berolina,super,seirawan,spartan,great,light-brigade,king-of-the-hill,bifurcator,team-mate,los-alamos,ciccolini,mexican,grande-acedrex,roman,almost-wildebeest,fairy"
+573 >first : accepted variants
+573 <first : feature option="Resign -check 0"
+573 >first : accepted option
+573 <first : feature option="Resign Threshold -spin 800 200 1200"
+573 >first : accepted option
+573 <first : feature option="Claim draw after -spin 50 0 200"
+573 >first : accepted option
+573 <first : feature option="Ini File -file /usr/share/games/fairymax/fmax.ini"
+573 >first : accepted option
+573 <first : feature option="Multi-PV Margin -spin 0 0 1000"
+573 >first : accepted option
+573 <first : feature option="Variant fairy selects -combo FIDE-Clobberers /// Clobberers-FIDE /// FIDE-Nutters /// Nutters-FIDE /// Clobberers-Nutters /// Nutters-Clobberers /// FIDE-Rookies /// Rookies-FIDE /// Clobberers-Rookies /// Rookies-Clobberers /// Nutters-Rookies /// Rookies-Nutters"
+573 >first : accepted option
+573 <first : feature option="Makruk rules -combo makruk /// Cambodian /// Ai-wok"
+573 >first : accepted option
+573 <first : feature option="Dummy Slider Example -slider 20 0 100"
+573 >first : accepted option
+573 <first : feature option="Dummy String Example -string happy birthday!"
+573 >first : accepted option
+573 <first : feature option="Dummy Path Example -path ."
+573 >first : accepted option
+573 <first : feature option="Automatic persistent-hash dialog -check 0"
+573 >first : accepted option
+573 <first : feature option="Info -button"
+573 >first : accepted option
+573 <first : feature option="Save in hash file -button"
+573 >first : accepted option
+573 <first : feature option="Clear Hash -button"
+573 >first : accepted option
+573 <first : feature done=1
+573 >first : accepted done
+602 <first : pong 2
+StartChildProcess (dir=".") ./chess
+605 >second: xboard
+protover 2
+10609 >second: new
+random
+10609 >second: level 0 5 2
+10609 >second: post
+10609 >second: hard
+10609 >second: force
+New game (1): Fairy-Max 5.0b-chess (w)
+10620 >first : computer
+10620 >second: computer
+10620 >first : black
+10620 >first : time 30000
+10620 >first : otim 30000
+10620 >first : white
+book hit = (NULL)
+10620 >first : go
+nps: w=-1, b=-1
+10620 <first : Error (unknown command): computer
+10621 <first : # times @ 2219417102
+10621 <first : # 16+16 pieces, centr = (1,1) R=40
+10621 <first :  1     11        0          7 a2a4
+10621 <first :  1     15        0          9 b2b3
+10621 <first :  1     27        0         11 c2c4
+10621 <first :  2     -2        0         19 c2c4 c7c5
+10621 <first :  2      6        0         28 c2c3 c7c5
+10621 <first :  2     11        0         74 f2f3 c7c5
+10621 <first : # times @ 2219417102: real=0 cpu=0
+10621 <first : # promo = 0 (`) GT = 0
+10621 <first : move f2f3
+10621 >second: time 30000
+10621 >second: otim 30199
+book hit = (NULL)
+10621 >second: f2f3
+10621 >second: black
+10621 >second: go
+GameEnds(29, xboard exit, 2)
+GE(29, xboard exit, 2) bare king k=16 color=44
+Interrupting first
+15708 >first : result * {xboard exit}
+Interrupting second
+15708 >second: result * {xboard exit}
+15708 >second: force
+15709 >first : quit
+15712 >second: quit
